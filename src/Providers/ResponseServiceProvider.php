@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace InfCompany\ApiResponseLaravel\Providers;
+namespace Ayd\ApiResponseLaravel\Providers;
 
-use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use InfCompany\ApiResponseBase\Contracts\AbilitiesResolver;
+use Illuminate\Contracts\Foundation\Application;
+use Ayd\ApiResponseBase\Contracts\AbilitiesResolver;
 
 class ResponseServiceProvider extends ServiceProvider
 {

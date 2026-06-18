@@ -1,11 +1,11 @@
 # API Response Laravel
 
-Laravel integration for the `inf-company/api-response-base` package. Provides a service class, trait, facade, and global helper functions for building consistent JSON API responses.
+Laravel integration for the `ayd/api-response-base` package. Provides a service class, trait, facade, and global helper functions for building consistent JSON API responses.
 
 ## Installation
 
 ```bash
-composer require inf-company/api-response-laravel
+composer require ayd/api-response-laravel
 ```
 
 The service provider is auto-discovered. To register manually:
@@ -13,7 +13,7 @@ The service provider is auto-discovered. To register manually:
 ```php
 // config/app.php
 'providers' => [
-    InfCompany\ApiResponseLaravel\Providers\ResponseServiceProvider::class,
+    Ayd\ApiResponseLaravel\Providers\ResponseServiceProvider::class,
 ],
 ```
 
@@ -24,7 +24,7 @@ The service provider is auto-discovered. To register manually:
 Inject `ApiResponse` directly into your controller or service:
 
 ```php
-use InfCompany\ApiResponseLaravel\ApiResponse;
+use Ayd\ApiResponseLaravel\ApiResponse;
 
 class UserController
 {
@@ -58,7 +58,7 @@ class UserController
 Use `ApiResponseTrait` to call response methods directly on the controller:
 
 ```php
-use InfCompany\ApiResponseLaravel\ApiResponseTrait;
+use Ayd\ApiResponseLaravel\ApiResponseTrait;
 
 class UserController
 {
@@ -88,7 +88,7 @@ class UserController
 ### 3. Facade
 
 ```php
-use InfCompany\ApiResponseLaravel\Facades\Response;
+use Ayd\ApiResponseLaravel\Facades\Response;
 
 Route::get('/health', fn () => Response::ok(['status' => 'healthy']));
 ```
@@ -97,7 +97,7 @@ To use the facade, add it to `config/app.php`:
 
 ```php
 'aliases' => [
-    'ResponseApi' => InfCompany\ApiResponseLaravel\Facades\Response::class,
+    'ResponseApi' => Ayd\ApiResponseLaravel\Facades\Response::class,
 ],
 ```
 
@@ -164,7 +164,7 @@ This automatically:
 Bind your resolver in a service provider to auto-inject abilities into every response:
 
 ```php
-use InfCompany\ApiResponseBase\Contracts\AbilitiesResolver;
+use Ayd\ApiResponseBase\Contracts\AbilitiesResolver;
 
 $this->app->bind(AbilitiesResolver::class, MyAbilitiesResolver::class);
 ```
@@ -199,7 +199,7 @@ The `ResponseServiceProvider` checks if `AbilitiesResolver` is bound and passes 
 ## Requirements
 
 - PHP ^8.1
-- `inf-company/api-response-base`
+- `ayd/api-response-base` ^1.0
 - `illuminate/http` ^10.0 | ^11.0 | ^12.0
 - `illuminate/support` ^10.0 | ^11.0 | ^12.0
 
