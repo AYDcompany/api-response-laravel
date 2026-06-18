@@ -1,7 +1,7 @@
 {
   "name": "inf-company/api-response-laravel",
   "type": "library",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "An API response package for Laravel applications at INF Company.",
   "autoload": {

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace InfCompany\ApiResponseLaravel;
 
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\JsonResponse;
 use InfCompany\ApiResponseBase\Meta;
 use InfCompany\ApiResponseBase\StatusCode;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 trait ApiResponseTrait
 {
